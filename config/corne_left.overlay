@@ -3,7 +3,7 @@
 // device controller (a board that has one, such as the XIAO BLE, needs
 // nothing here).
 
-#include "corne.overlay"
+#include "corne.dtsi"
 
 &zephyr_udc0 {
     cdc_acm_uart: cdc_acm_uart {

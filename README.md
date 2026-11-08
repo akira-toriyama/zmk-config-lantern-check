@@ -11,8 +11,8 @@ positions are a stand-in).
 
 - [config/west.yml](config/west.yml): ZMK at `main`, the module pinned by
   commit.
-- [config/corne.overlay](config/corne.overlay): the strip, the key under each
-  LED, and the split's behavior nodes.
+- [config/corne.dtsi](config/corne.dtsi), included by both halves' overlays:
+  the strip, the key under each LED, and the split's behavior nodes.
 - [config/corne_left.overlay](config/corne_left.overlay),
   [config/corne_left.conf](config/corne_left.conf): the central half's CDC ACM
   port, which the nice!nano's devicetree lacks.

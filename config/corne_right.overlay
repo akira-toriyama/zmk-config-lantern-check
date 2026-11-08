@@ -1,0 +1,3 @@
+// The right half, a split peripheral.
+
+#include "corne.dtsi"
