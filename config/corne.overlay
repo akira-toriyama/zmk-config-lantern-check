@@ -1,0 +1,51 @@
+// Both halves (ZMK takes the first user overlay whose name is a prefix of
+// the shield's; config/corne_left.overlay includes this file and adds the
+// port): the least zmk-lantern needs, and the split's nodes, as its README
+// writes them. positions is a stand-in, the left half's chain in key order:
+// a real Corne's chain starts with six LEDs under no key, which you map to
+// the nearest key, and the right half's keys are its own positions.
+
+&led_strip {
+    chain-length = <21>;
+};
+
+/ {
+    lantern_keys: lantern_keys {
+        compatible = "lantern,keys";
+        strip = <&led_strip>;
+        positions = <
+             0  1  2  3  4  5
+            12 13 14 15 16 17
+            24 25 26 27 28 29
+                     36 37 38
+        >;
+    };
+
+    behaviors {
+        palette: palette {
+            compatible = "lantern,behavior-palette";
+            #binding-cells = <2>;
+        };
+        effect: effect {
+            compatible = "lantern,behavior-effect";
+            #binding-cells = <2>;
+        };
+        intro: intro {
+            compatible = "lantern,behavior-intro";
+            #binding-cells = <2>;
+        };
+        tempo: tempo {
+            compatible = "lantern,behavior-tempo";
+            #binding-cells = <2>;
+        };
+        hit: hit {
+            compatible = "lantern,behavior-hit";
+            #binding-cells = <2>;
+        };
+        layer: layer {
+            compatible = "lantern,behavior-layer";
+            #binding-cells = <2>;
+            layers = <1 0  2 1>;
+        };
+    };
+};

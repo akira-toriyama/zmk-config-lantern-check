@@ -1,14 +1,21 @@
+# ZMK at main (the module builds against ZMK main's Zephyr 4.1; it is not
+# built against a ZMK release) and zmk-lantern as a west project, pinned by
+# commit. The module's README, "Using it in a ZMK config", is what this
+# repository follows.
 manifest:
-  defaults:
-    revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: akira-toriyama
+      url-base: https://github.com/akira-toriyama
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: main
       import: app/west.yml
+    - name: zmk-lantern
+      remote: akira-toriyama
+      revision: 44a0c83f0731acd7548c72cf4f621aa1b356d0e5
+      path: modules/zmk-lantern
   self:
     path: config

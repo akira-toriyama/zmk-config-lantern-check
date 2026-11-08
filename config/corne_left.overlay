@@ -1,0 +1,12 @@
+// The left half, the split central: the host's port. The nice!nano's
+// devicetree has no CDC ACM port, so this adds one under the board's USB
+// device controller (a board that has one, such as the XIAO BLE, needs
+// nothing here).
+
+#include "corne.overlay"
+
+&zephyr_udc0 {
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
