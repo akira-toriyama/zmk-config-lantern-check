@@ -1,7 +1,7 @@
-# ZMK at main (the module builds against ZMK main's Zephyr 4.1; it is not
-# built against a ZMK release) and zmk-lantern as a west project, pinned by
-# commit. The module's README, "Using it in a ZMK config", is what this
-# repository follows.
+# ZMK at main (the modules build against ZMK main's Zephyr 4.1; neither is
+# built against a ZMK release), and zmk-lantern and zmk-beacon as west
+# projects, pinned by commit. Each module's README, "Using it in a ZMK config",
+# is what this repository follows.
 manifest:
   remotes:
     - name: zmkfirmware
@@ -17,5 +17,9 @@ manifest:
       remote: akira-toriyama
       revision: 44a0c83f0731acd7548c72cf4f621aa1b356d0e5
       path: modules/zmk-lantern
+    - name: zmk-beacon
+      remote: akira-toriyama
+      revision: e69d831dcf0660766947284f022f17009f2c6179
+      path: modules/zmk-beacon
   self:
     path: config
