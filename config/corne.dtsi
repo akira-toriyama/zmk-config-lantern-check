@@ -1,6 +1,6 @@
 // Both halves' overlays include this file (ZMK reads one overlay a build and
 // tries corne.overlay before corne_left.overlay, so the left half's port
-// needs an overlay of its own): the least zmk-lantern needs, and the split's
+// needs an overlay of its own): the least zmk-vfx-lantern needs, and the split's
 // nodes, as its README writes them. positions is a stand-in, the left half's chain in key order:
 // a real Corne's chain starts with six LEDs under no key, which you map to
 // the nearest key, and the right half's keys are its own positions.

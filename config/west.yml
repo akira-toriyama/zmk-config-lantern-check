@@ -1,5 +1,5 @@
 # ZMK at main (the modules build against ZMK main's Zephyr 4.1; neither is
-# built against a ZMK release), and zmk-lantern and zmk-beacon as west
+# built against a ZMK release), and zmk-vfx-lantern and zmk-vfx-beacon as west
 # projects, pinned by commit. Each module's README, "Using it in a ZMK config",
 # is what this repository follows.
 manifest:
@@ -13,13 +13,13 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-lantern
+    - name: zmk-vfx-lantern
       remote: akira-toriyama
-      revision: 44a0c83f0731acd7548c72cf4f621aa1b356d0e5
-      path: modules/zmk-lantern
-    - name: zmk-beacon
+      revision: ea671482e9f9c550d4adc4f3dc607d7e804bd292
+      path: modules/zmk-vfx-lantern
+    - name: zmk-vfx-beacon
       remote: akira-toriyama
-      revision: e69d831dcf0660766947284f022f17009f2c6179
-      path: modules/zmk-beacon
+      revision: 2a3bbc586526034c25af84998f812e68ecec3770
+      path: modules/zmk-vfx-beacon
   self:
     path: config
